@@ -1,15 +1,26 @@
 @font-face {
-    font-family: 'BrandonRegular';
-    src: url(./assets/fonts/BrandonRegular.woff);
+  font-family: "BrandonRegular";
+  src: url(./assets/fonts/BrandonRegular.woff);
 }
 @font-face {
-    font-family: 'BrandonItalics';
-    src: url(./assets/fonts/BrandonItalics.woff);
+  font-family: "BrandonItalics";
+  src: url(./assets/fonts/BrandonItalics.woff);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    font-family: "BrandonRegular",-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "BrandonRegular", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.flex__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
 }

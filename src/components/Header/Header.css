@@ -1,0 +1,14 @@
+.hamburger {
+  margin: 1em 2em;
+}
+
+.hamburger * {
+  margin-top: 5px;
+}
+
+.hamburger__line {
+  background-color: #000;
+  border-radius: 10px;
+  height: 5px;
+  width: 40px;
+}
