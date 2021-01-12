@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const RecommendedPage = () => {
-    return (
-        <div>
+  return <div>RecommendedPage</div>;
+};
 
-        </div>
-    )
-}
-
-export default RecommendedPage
+export default RecommendedPage;

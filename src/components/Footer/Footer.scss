@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em 0em;
+
+  .footer__icon {
+    cursor: pointer;
+    font-size: 20px;
+  }
+}

@@ -1,14 +1,33 @@
-.hamburger {
-  margin: 1em 2em;
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.hamburger * {
+.header .hamburger {
+  cursor: pointer;
+}
+
+.header .hamburger * {
   margin-top: 5px;
 }
 
-.hamburger__line {
-  background-color: #000;
-  border-radius: 10px;
-  height: 5px;
-  width: 40px;
+.header .hamburger .hamburger__line {
+  background-color: #fff;
+  height: 4px;
+  width: 35px;
+}
+
+.header .header__search {
+  font-size: 20px;
+  cursor: pointer;
 }

@@ -1,12 +1,6 @@
-import { CHANGE_ACCENT_COLOR, CHANGE_BACKGROUND_COLOR, CHANGE_CONTENT_REGION, CHANGE_PRIMARY_COLOR, CHANGE_RESTRICTED_MODE } from './actionTypes';
+import { CHANGE_ACCENT_COLOR, CHANGE_BACKGROUND_COLOR, CHANGE_CONTENT_REGION, CHANGE_PRIMARY_COLOR, CHANGE_RESTRICTED_MODE } from '../actions/actionTypes';
 
-export const initialState = {
-    accentColor: localStorage.getItem('accentColor'),
-    backgroundColor: localStorage.getItem('backgroundColor'),
-    contentRegion: localStorage.getItem('contentRegion'),
-    primaryColor: localStorage.getItem('primaryColor'),
-    restrictedMode: localStorage.getItem('restrictedMode')
-}
+import initialState from '../states/initialState';
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {

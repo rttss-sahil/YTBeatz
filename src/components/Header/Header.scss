@@ -1,0 +1,29 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1em 2em;
+
+  justify-content: space-between;
+  align-items: center;
+
+  .hamburger {
+    cursor: pointer;
+    * {
+      margin-top: 5px;
+    }
+
+    .hamburger__line {
+      background-color: #fff;
+      height: 4px;
+      width: 35px;
+    }
+  }
+
+  .header__search {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
