@@ -2,8 +2,6 @@ import React from "react";
 
 import { ImSearch } from "react-icons/im";
 
-import store from "../../redux/store/store";
-
 import "./Header.css";
 
 const Header = ({ currentPage }) => {
@@ -12,25 +10,20 @@ const Header = ({ currentPage }) => {
       case "HomePage":
         return "Home";
       case "ProfilePage":
-        return "profile";
+        return "My Profile";
       case "RecommendedPage":
         return "Recommended";
       case "SettingPage":
         return "Settings";
-      case "TopTrackPage":
+      case "TopTracksPage":
         return "Your Top Tracks";
       default:
         return "Not Found";
     }
   };
   return (
-    <div
-      className="header flex__row"
-      style={{
-        backgroundColor: store.getState().backgroundColor,
-        color: store.getState().accentColor,
-      }}
-    >
+    <div className="header flex__row">
+      {console.log(currentPage)}
       <div className="hamburger flex__column">
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>

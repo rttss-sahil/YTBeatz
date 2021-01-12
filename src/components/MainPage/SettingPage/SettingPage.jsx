@@ -1,12 +1,8 @@
-import React from 'react';
-import './SettingPage.css';
+import React from "react";
+import "./SettingPage.css";
 
 const SettingPage = () => {
-    return (
-        <div>
-
-        </div>
-    )
-}
+  return <div>Settinpage</div>;
+};
 
 export default SettingPage;

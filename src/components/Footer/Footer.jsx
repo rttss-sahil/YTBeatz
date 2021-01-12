@@ -10,30 +10,24 @@ import { HiTrendingUp } from "react-icons/hi";
 
 import "./Footer.css";
 
-const Footer = ({ currentPage, handleClick }) => {
+const Footer = ({ currentPage, handlePageChange }) => {
   return (
-    <div
-      className="footer flex__row"
-      style={{
-        backgroundColor: store.getState().backgroundColor,
-        color: store.getState().accentColor,
-      }}
-    >
-      <div className="footer__icon" onClick={handleClick}>
+    <div className="footer flex__row">
+      <div className="footer__icon" onClick={(e) => handlePageChange(1)}>
         {currentPage === "HomePage" ? <IoHome /> : <IoHomeOutline />}
       </div>
-      <div className="footer__icon" onClick={handleClick}>
+      <div className="footer__icon" onClick={(e) => handlePageChange(2)}>
         {currentPage === "RecommendedPage" ? <GiAlliedStar /> : <GrStar />}
       </div>
-      <div className="footer__icon" onClick={handleClick}>
-        {currentPage === "TopTrackPage" ? (
+      <div className="footer__icon" onClick={(e) => handlePageChange(3)}>
+        {currentPage === "TopTracksPage" ? (
           <HiTrendingUp />
         ) : (
           <IoIosTrendingUp />
         )}
       </div>
-      <div className="footer__icon" onClick={handleClick}>
-        {currentPage === "" ? <GiDoctorFace /> : <GiHumanTarget />}
+      <div className="footer__icon" onClick={(e) => handlePageChange(4)}>
+        {currentPage === "ProfilePage" ? <GiDoctorFace /> : <GiHumanTarget />}
       </div>
     </div>
   );
