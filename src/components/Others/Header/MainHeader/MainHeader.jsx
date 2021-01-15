@@ -2,15 +2,13 @@ import React from "react";
 
 import { ImSearch } from "react-icons/im";
 
-import "./Header.css";
+import "./MainHeader.css";
 
-const Header = ({ currentPage }) => {
+const MainHeader = ({ currentPage }) => {
   const currentPageTitle = () => {
     switch (currentPage) {
       case "HomePage":
-        return "Home";
-      case "ProfilePage":
-        return "My Profile";
+        return "My Home";
       case "RecommendedPage":
         return "Recommended";
       case "SettingPage":
@@ -18,13 +16,16 @@ const Header = ({ currentPage }) => {
       case "TopTracksPage":
         return "Your Top Tracks";
       default:
-        return "Not Found";
+        return "My Profile";
     }
   };
   return (
     <div className="header flex__row">
-      {console.log(currentPage)}
-      <div className="hamburger flex__column">
+      <div
+        className={`hamburger flex__column ${
+          currentPage === "SearchingPage" ? " hamburger__back" : ""
+        }`}
+      >
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>
@@ -37,4 +38,4 @@ const Header = ({ currentPage }) => {
   );
 };
 
-export default Header;
+export default MainHeader;

@@ -24,6 +24,29 @@
   margin-top: 5px;
 }
 
+.header .hamburger.hamburger__back {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header .hamburger.hamburger__back .hamburger__line:first-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  width: 20px;
+  height: 3px;
+}
+
+.header .hamburger.hamburger__back .hamburger__line:nth-child(2) {
+  height: 3px;
+}
+
+.header .hamburger.hamburger__back .hamburger__line:last-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 20px;
+  height: 3px;
+}
+
 .header .hamburger .hamburger__line {
   background-color: var(--accentColor);
   height: 4px;

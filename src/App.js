@@ -1,57 +1,46 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import HomePage from './components/MainPage/HomePage/HomePage';
-import RecommendedPage from './components/MainPage/RecommendedPage/RecommendedPage';
-import ProfilePage from './components/MainPage/ProfilePage/ProfilePage';
-import TopTracksPage from './components/MainPage/TopTracksPage/TopTracksPage';
 import SettingPage from './components/MainPage/SettingPage/SettingPage';
-
-import store from './redux/store/store';
+import SearchingPage from './components/Search/SearchingPage/SearchingPage';
+import SearchResultPage from './components/Search/SearchPage/SearchResultPage';
 
 import './App.css';
 import './global.css';
+import MainPage from './components/MainPage/MainPage/MainPage';
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-
-const App = () => {
-  const [CurrentPage, setCurrentPage] = React.useState(RecommendedPage),
-
-    pages = page => {
+const App = ({ display }) => {
+  const [currentPage, setCurrentPage] = React.useState(MainPage),
+    pageChangeHandler = page => {
       switch (page) {
-        case 1:
-          return HomePage;
-        case 2:
-          return RecommendedPage;
-        case 3:
-          return TopTracksPage;
+        case "SettingPage":
+          return SettingPage;
+        case "SearchingPage":
+          return SearchingPage;
+        case "SearchResult":
+          return SearchResultPage;
         default:
-          return ProfilePage;
+          return MainPage
       }
-    },
-    handlePageChange = page => {
-      setCurrentPage(pages(page))
     };
-  document.documentElement.style.setProperty("--bgColor", store.getState().backgroundColor);
-  document.documentElement.style.setProperty("--accentColor", store.getState().accentColor);
+  document.documentElement.style.setProperty("--bgColor", display.backgroundColor);
+  document.documentElement.style.setProperty("--accentColor", display.accentColor);
 
 
   return (
     <React.Fragment>
       <Router>
-        {/* Header */}
-        <Header currentPage={`${CurrentPage}`} />
-        <Switch>
-          {/* HomePage Route */}
-          {CurrentPage}
-          {/* <Route exact path="/"><HomePage /></Route> */}
-        </Switch>
-        {/* Footer */}
-        <Footer currentPage={`${CurrentPage}`} handlePageChange={handlePageChange} />
+        {/* <Switch> */}
+        <MainPage />
+        {/* </Switch> */}
       </Router>
     </React.Fragment>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  display: state.displayReducer
+})
+
+export default connect(mapStateToProps)(App);

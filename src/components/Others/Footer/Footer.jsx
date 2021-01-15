@@ -1,7 +1,5 @@
 import React from "react";
 
-import store from "../../redux/store/store";
-
 import { IoIosTrendingUp } from "react-icons/io";
 import { IoHomeOutline, IoHome } from "react-icons/io5";
 import { GiAlliedStar, GiDoctorFace, GiHumanTarget } from "react-icons/gi";

@@ -1,7 +1,7 @@
 import React from "react";
 
 const RecommendedPage = () => {
-  return <div>RecommendedPage</div>;
+  return <div key="RecommendedPage">RecommendedPage</div>;
 };
 
 export default RecommendedPage;

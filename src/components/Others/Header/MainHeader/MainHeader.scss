@@ -17,6 +17,27 @@
       margin-top: 5px;
     }
 
+    &.hamburger__back {
+      transition: all 0.3s ease;
+
+      .hamburger__line {
+        &:first-child {
+          transform: rotate(-45deg);
+          width: 20px;
+          height: 3px;
+        }
+
+        &:nth-child(2) {
+          height: 3px;
+        }
+
+        &:last-child {
+          transform: rotate(45deg);
+          width: 20px;
+          height: 3px;
+        }
+      }
+    }
     .hamburger__line {
       background-color: var(--accentColor);
       height: 4px;
