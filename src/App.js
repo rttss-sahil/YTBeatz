@@ -32,7 +32,7 @@ const App = ({ display }) => {
     <React.Fragment>
       <Router>
         {/* <Switch> */}
-        <MainPage />
+        {currentPage}
         {/* </Switch> */}
       </Router>
     </React.Fragment>
