@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';// eslint-disable-next-line
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -10,18 +10,18 @@ import './App.css';
 import './global.css';
 import MainPage from './components/MainPage/MainPage/MainPage';
 
-const App = ({ display }) => {
-  const [currentPage, setCurrentPage] = React.useState(MainPage),
+const App = ({ display }) => {// eslint-disable-next-line
+  const [currentPage, setCurrentPage] = React.useState(<MainPage />),// eslint-disable-next-line
     pageChangeHandler = page => {
       switch (page) {
         case "SettingPage":
-          return SettingPage;
+          return <SettingPage />;
         case "SearchingPage":
-          return SearchingPage;
+          return <SearchingPage />
         case "SearchResult":
-          return SearchResultPage;
+          return <SearchResultPage />;
         default:
-          return MainPage
+          return <MainPage />
       }
     };
   document.documentElement.style.setProperty("--bgColor", display.backgroundColor);

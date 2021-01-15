@@ -9,17 +9,19 @@ import Header from "../../Others/Header/Header";
 import Footer from "../../Others/Footer/Footer";
 
 const MainPage = () => {
-  const [currentPage, setCurrentPage] = React.useState(ProfilePage),
+  const [currentPage, setCurrentPage] = React.useState(
+      <ProfilePage key="ProfilePage" />
+    ),
     pages = (page) => {
       switch (page) {
-        case 1:
-          return HomePage;
-        case 2:
-          return RecommendedPage;
-        case 3:
-          return TopTracksPage;
+        case "HomePage":
+          return <HomePage key="HomePage" />;
+        case "RecommendedPage":
+          return <RecommendedPage key="RecommendedPage" />;
+        case "TopTracksPage":
+          return <TopTracksPage key="TopTracksPage" />;
         default:
-          return ProfilePage;
+          return <ProfilePage key="ProfilePage" />;
       }
     },
     handlePageChange = (page) => {
@@ -29,6 +31,7 @@ const MainPage = () => {
     <>
       {/* Header */}
       <Header currentPage={currentPage.key} />
+      {currentPage}
       {/* Footer */}
       <Footer
         currentPage={currentPage.key}

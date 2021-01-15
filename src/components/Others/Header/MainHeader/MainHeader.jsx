@@ -4,7 +4,7 @@ import { ImSearch } from "react-icons/im";
 
 import "./MainHeader.css";
 
-const MainHeader = ({ currentPage }) => {
+const MainHeader = ({ currentPage, changePage }) => {
   const currentPageTitle = () => {
     switch (currentPage) {
       case "HomePage":
@@ -21,17 +21,17 @@ const MainHeader = ({ currentPage }) => {
   };
   return (
     <div className="header flex__row">
-      <div
-        className={`hamburger flex__column ${
-          currentPage === "SearchingPage" ? " hamburger__back" : ""
-        }`}
-      >
+      {console.log(currentPage)}
+      <div className={`hamburger flex__column`}>
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>
       </div>
       <h2 className="header__title">{currentPageTitle()}</h2>
-      <div className="header__search">
+      <div
+        className="header__search"
+        onClick={() => changePage("SearchingPage")}
+      >
         <ImSearch />
       </div>
     </div>

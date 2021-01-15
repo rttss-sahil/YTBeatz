@@ -11,20 +11,32 @@ import "./Footer.css";
 const Footer = ({ currentPage, handlePageChange }) => {
   return (
     <div className="footer flex__row">
-      <div className="footer__icon" onClick={(e) => handlePageChange(1)}>
+      <div
+        className="footer__icon"
+        onClick={(e) => handlePageChange("HomePage")}
+      >
         {currentPage === "HomePage" ? <IoHome /> : <IoHomeOutline />}
       </div>
-      <div className="footer__icon" onClick={(e) => handlePageChange(2)}>
+      <div
+        className="footer__icon"
+        onClick={(e) => handlePageChange("RecommendedPage")}
+      >
         {currentPage === "RecommendedPage" ? <GiAlliedStar /> : <GrStar />}
       </div>
-      <div className="footer__icon" onClick={(e) => handlePageChange(3)}>
+      <div
+        className="footer__icon"
+        onClick={(e) => handlePageChange("TopTracksPage")}
+      >
         {currentPage === "TopTracksPage" ? (
           <HiTrendingUp />
         ) : (
           <IoIosTrendingUp />
         )}
       </div>
-      <div className="footer__icon" onClick={(e) => handlePageChange(4)}>
+      <div
+        className="footer__icon"
+        onClick={(e) => handlePageChange("ProfilePage")}
+      >
         {currentPage === "ProfilePage" ? <GiDoctorFace /> : <GiHumanTarget />}
       </div>
     </div>
