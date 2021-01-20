@@ -1,5 +1,5 @@
 import React from "react";
-import "./TopTracksPage.css";
+import "./TopTracksPage.scss";
 
 const TopTracksPage = () => {
   return <div key="TopTracksPage">TopTracksPage</div>;

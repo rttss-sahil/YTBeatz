@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProfilePage.css";
+import "./ProfilePage.scss";
 
 const ProfilePage = () => {
   return <div key="ProfilePage"></div>;

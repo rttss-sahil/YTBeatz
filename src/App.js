@@ -6,8 +6,8 @@ import SettingPage from './components/MainPage/SettingPage/SettingPage';
 import SearchingPage from './components/Search/SearchingPage/SearchingPage';
 import SearchResultPage from './components/Search/SearchPage/SearchResultPage';
 
-import './App.css';
-import './global.css';
+import './App.scss';
+import './global.scss';
 import MainPage from './components/MainPage/MainPage/MainPage';
 
 const App = ({ display }) => {// eslint-disable-next-line

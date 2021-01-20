@@ -1,5 +1,5 @@
 import React from "react";
-import "./SettingPage.css";
+import "./SettingPage.scss";
 
 const SettingPage = () => {
   return <div key="SettingPage">SettingPage</div>;

@@ -2,7 +2,7 @@ import React from "react";
 
 import { ImSearch } from "react-icons/im";
 
-import "./MainHeader.css";
+import "./MainHeader.scss";
 
 const MainHeader = ({ currentPage, changePage }) => {
   const currentPageTitle = () => {

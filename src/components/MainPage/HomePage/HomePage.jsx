@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomePage.css";
+import "./HomePage.scss";
 
 const HomePage = () => {
   return <div key="HomePage">HomePage</div>;

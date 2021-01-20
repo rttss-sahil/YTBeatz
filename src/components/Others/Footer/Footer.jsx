@@ -6,7 +6,7 @@ import { GiAlliedStar, GiDoctorFace, GiHumanTarget } from "react-icons/gi";
 import { GrStar } from "react-icons/gr";
 import { HiTrendingUp } from "react-icons/hi";
 
-import "./Footer.css";
+import "./Footer.scss";
 
 const Footer = ({ currentPage, handlePageChange }) => {
   return (
