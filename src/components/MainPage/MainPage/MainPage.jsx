@@ -1,39 +1,19 @@
 import React from "react";
 
-import HomePage from "../HomePage/HomePage";
-import RecommendedPage from "../RecommendedPage/RecommendedPage";
+import MainFooter from "../../Others/Footer/MainFooter";
 import ProfilePage from "../ProfilePage/ProfilePage";
-import TopTracksPage from "../TopTracksPage/TopTracksPage";
-
-import Header from "../../Others/Header/Header";
-import Footer from "../../Others/Footer/Footer";
+import MainHeader from "../../Others/Header/MainHeader/MainHeader";
 
 const MainPage = () => {
-  const [currentPage, setCurrentPage] = React.useState(
-      <ProfilePage key="ProfilePage" />
-    ),
-    pages = (page) => {
-      switch (page) {
-        case "HomePage":
-          return <HomePage key="HomePage" />;
-        case "RecommendedPage":
-          return <RecommendedPage key="RecommendedPage" />;
-        case "TopTracksPage":
-          return <TopTracksPage key="TopTracksPage" />;
-        default:
-          return <ProfilePage key="ProfilePage" />;
-      }
-    },
+  const [currentPage, setCurrentPage] = React.useState(ProfilePage),
     handlePageChange = (page) => {
-      setCurrentPage(pages(page));
+      setCurrentPage(page);
     };
   return (
     <>
-      {/* Header */}
-      <Header currentPage={currentPage.key} />
+      <MainHeader currentPage={currentPage.key} />
       {currentPage}
-      {/* Footer */}
-      <Footer
+      <MainFooter
         currentPage={currentPage.key}
         handlePageChange={handlePageChange}
       />

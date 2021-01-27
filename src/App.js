@@ -1,39 +1,30 @@
-import React from 'react';// eslint-disable-next-line
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import SettingPage from './components/MainPage/SettingPage/SettingPage';
-import SearchingPage from './components/Search/SearchingPage/SearchingPage';
-import SearchResultPage from './components/Search/SearchPage/SearchResultPage';
 
 import './App.scss';
 import './global.scss';
 import MainPage from './components/MainPage/MainPage/MainPage';
 
-const App = ({ display }) => {// eslint-disable-next-line
-  const [currentPage, setCurrentPage] = React.useState(<MainPage />),// eslint-disable-next-line
-    pageChangeHandler = page => {
-      switch (page) {
-        case "SettingPage":
-          return <SettingPage />;
-        case "SearchingPage":
-          return <SearchingPage />
-        case "SearchResult":
-          return <SearchResultPage />;
-        default:
-          return <MainPage />
-      }
-    };
+import font from './assets/fonts/BrandonRegular.woff';
+
+const App = ({ display }) => {
   document.documentElement.style.setProperty("--bgColor", display.backgroundColor);
   document.documentElement.style.setProperty("--accentColor", display.accentColor);
-
+  localStorage.clear()
+  if (!localStorage.getItem('font')) {
+    localStorage.setItem('font', font)
+  }
 
   return (
     <React.Fragment>
       <Router>
-        {/* <Switch> */}
-        {currentPage}
-        {/* </Switch> */}
+        <Switch>
+          <Route path="/settings"><SettingPage /></Route>
+          <Route exact path="/"><MainPage /></Route>
+        </Switch>
       </Router>
     </React.Fragment>
   );

@@ -21,7 +21,6 @@ const MainHeader = ({ currentPage, changePage }) => {
   };
   return (
     <div className="header flex__row">
-      {console.log(currentPage)}
       <div className={`hamburger flex__column`}>
         <div className="hamburger__line border999"></div>
         <div className="hamburger__line border999"></div>
@@ -30,7 +29,7 @@ const MainHeader = ({ currentPage, changePage }) => {
       <h2 className="header__title">{currentPageTitle()}</h2>
       <div
         className="header__search"
-        onClick={() => changePage("SearchingPage")}
+        // onClick={() => changePage("SearchingPage")}
       >
         <ImSearch />
       </div>
