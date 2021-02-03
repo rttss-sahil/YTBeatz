@@ -1,0 +1,41 @@
+*.active .options {
+  //   border: 1px solid var(--accentColor);
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+* ul.options button {
+  visibility: hidden;
+  list-style: none;
+  transform: translate(200%, -100%);
+  transition: all 0.3s ease;
+}
+
+*.active .options button {
+  z-index: 100;
+  background-color: var(--bgColor);
+  color: var(--accentColor);
+  visibility: visible;
+  height: 40px;
+  width: 120px;
+  padding: 0px 20px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--accentColor);
+  font-size: 18px;
+  transform: translate(0);
+  transition: all 0.2s ease;
+
+  & :nth-child(2) {
+    border-top: 0;
+  }
+
+  &:hover {
+    background-color: var(--accentColor);
+    color: var(--bgColor);
+  }
+
+  &:active {
+    font-size: 16px;
+  }
+}

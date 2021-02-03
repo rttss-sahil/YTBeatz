@@ -1,0 +1,40 @@
+.profile__details {
+  width: 98vw;
+
+  .profile__details_picture {
+    background-color: var(--accentColor);
+    height: 40px;
+    width: 40px;
+  }
+
+  .three_dot_option {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--accentColor);
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: var(--accentColor);
+      top: -10px;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      height: 5px;
+      width: 5px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: var(--accentColor);
+      bottom: -10px;
+      right: 0;
+    }
+  }
+}

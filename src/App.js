@@ -8,15 +8,15 @@ import './App.scss';
 import './global.scss';
 import MainPage from './components/MainPage/MainPage/MainPage';
 
-import font from './assets/fonts/BrandonRegular.woff';
+// import font from './assets/fonts/BrandonRegular.woff';
 
 const App = ({ display }) => {
-  document.documentElement.style.setProperty("--bgColor", display.backgroundColor);
-  document.documentElement.style.setProperty("--accentColor", display.accentColor);
-  localStorage.clear()
-  if (!localStorage.getItem('font')) {
-    localStorage.setItem('font', font)
-  }
+  scripts(display)
+
+  // localStorage.clear()
+  // if (!localStorage.getItem('font')) {
+  //   localStorage.setItem('font', font)
+  // }
 
   return (
     <React.Fragment>
@@ -35,3 +35,12 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(App);
+
+
+const scripts = (display) => {
+  document.documentElement.style.setProperty("--bgColor", display.backgroundColor);
+  document.documentElement.style.setProperty("--accentColor", display.accentColor);
+
+  // var favicon = document.head[0].createElement('favicon');
+  // favicon.src = "./assets/img/logo.svg";
+}

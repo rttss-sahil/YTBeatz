@@ -1,13 +1,37 @@
 .flex__row {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .flex__column {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .border999 {
   border-radius: 999px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accentColor);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  padding: 5px 10px;
+  font-size: 18px;
 }
